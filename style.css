@@ -1,0 +1,264 @@
+body {
+  background-color: #e5e5e5;
+  font-family: "Times New Roman", Times, serif;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+main .logo {
+  width: 15vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 2em;
+}
+
+main .logo img {
+  padding-left: 3em;
+}
+
+#inputtext {
+  color: #0a3871;
+  font-family: "Inter";
+  font-style: normal;
+  line-height: 150%;
+  font-size: 3vw;
+}
+
+main .ico {
+  padding-right: 5px;
+}
+
+main .input_mensaje {
+  width: 60vw;
+  padding-top: 20vh;
+  display: flex;
+  justify-content: center;
+}
+
+main .resultado_mensaje .encontrado #result {
+  height: 80vh;
+  width: 90%;
+  border: none;
+  flex-direction: row;
+  resize: none;
+  background-color: rgba(255, 255, 255, 0);
+  padding: 5%;
+}
+
+main .input_mensaje .mensaje_contenedor {
+  width: 70%;
+  border: none;
+}
+
+main .input_mensaje .mensaje_contenedor textarea {
+  width: 100%;
+  resize: none;
+  background: transparent;
+  font-size: 2.5em;
+  border: none;
+  height: 63vh;
+  padding: 0;
+}
+
+main .input_mensaje .mensaje_contenedor textarea:focus {
+  outline: none;
+}
+
+main .input_mensaje .button {
+  display: flex;
+  gap: 1em;
+  padding-top: 1em;
+  flex-direction: column;
+}
+
+main .resultado_mensaje {
+  width: 30vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .resultado_mensaje .resultado {
+  background-color: #fff;
+  border-radius: 1em;
+  height: 100vh;
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 32px 32px 65px -1px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 32px 32px 65px -1px rgba(0, 0, 0, 0.06);
+  -moz-box-shadow: 32px 32px 65px -1px rgba(0, 0, 0, 0.06);
+}
+
+main .resultado .no_encontrado {
+  text-align: center;
+  padding: 2em;
+}
+
+#result {
+  font-weight: 200;
+  font-size: 1.5em;
+}
+
+main .resultado .no_encontrado img {
+  width: 100%;
+}
+
+main .resultado,
+main .resultado .encontrado {
+  display: none;
+  width: 100%;
+}
+
+main .buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+
+#copybutton {
+  margin: 3%;
+}
+
+#copybutton,
+#encryptbutton,
+#desencryptbutton {
+  padding: 1em;
+  width: 94.5%;
+  border-radius: 1em;
+  border: none;
+}
+
+#copybutton,
+#encryptbutton,
+#desencryptbutton {
+  cursor: pointer;
+}
+
+#encryptbutton {
+  background-color: #0a3871;
+  color: #fff;
+  font-weight: 500;
+  border: 2px solid #0a3871;
+}
+
+#desencryptbutton,
+#copybutton {
+  background-color: transparent;
+  color: #0a3871;
+  border: 2px solid #0a3871;
+  font-weight: 500;
+}
+
+#encryptbutton:hover {
+  background-color: transparent;
+  color: #0a3871;
+  border: 2px solid #0a3871;
+  font-weight: 500;
+}
+
+#desencryptbutton:hover {
+  background-color: #0a3871;
+  color: #fff;
+  font-weight: 500;
+  border: 2px solid #0a3871;
+}
+
+#copybutton:hover {
+  background-color: #0a3871;
+  color: #fff;
+  font-weight: 500;
+  border: 2px solid #0a3871;
+}
+
+main .button small {
+  color: #495057;
+  font-weight: 500;
+  vertical-align: middle;
+  display: flex;
+}
+
+@media screen and (max-width: 1400px) {
+  main .input_mensaje {
+    width: 60vw;
+  }
+  main .resultado_mensaje {
+    width: 35vw;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  main {
+    flex-direction: column;
+  }
+  .muneco {
+    display: none;
+  }
+  main .input_mensaje,
+  main .resultado_mensaje {
+    width: 100%;
+    padding-top: 5vh;
+  }
+
+  main .logo {
+    width: 20vw;
+    justify-content: flex-start;
+  }
+  main .logo img {
+    padding-left: 0px;
+  }
+
+  main .input_mensaje {
+    padding-top: 5vh;
+  }
+
+  main .input_mensaje .mensaje_contenedor {
+    width: 80%;
+  }
+
+  main .resultado_mensaje .resultado {
+    height: auto;
+    justify-content: left;
+    display: inline-block;
+  }
+
+  main .resultado .no_encontrado {
+    padding: 5%;
+  }
+
+  main .resultado .no_encontrado p,
+  h2 {
+    margin: 0%;
+  }
+
+  main .resultado_mensaje .encontrado #result {
+    height: auto;
+  }
+
+  #inputtext {
+    font-size: 4vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main .logo {
+    width: 30vw;
+  }
+  main .buttons {
+    display: block;
+  }
+
+  #encryptbutton {
+    margin-bottom: 7%;
+  }
+
+  #inputtext {
+    font-size: 5vw;
+  }
+}
